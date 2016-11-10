@@ -1,0 +1,12 @@
+#ifndef DLLASIAKAS_GLOBAL_H
+#define DLLASIAKAS_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(DLLASIAKAS_LIBRARY)
+#  define DLLASIAKASSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define DLLASIAKASSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // DLLASIAKAS_GLOBAL_H
