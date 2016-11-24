@@ -4,8 +4,10 @@
 #include <QDialog>
 #include <QString>
 #include <QTextEdit>
+#include <QSqlTableModel>
 
 #include <nosto.h>
+#include <yhteys.h>
 
 
 
@@ -34,6 +36,9 @@ private slots:
 private:
     Ui::Paasivu *ui;
     Nosto *uusiNosto;
+    QSqlTableModel *model;
+    Yhteys *uusiYhteys;
+    QSqlDatabase db;
 
 
 };

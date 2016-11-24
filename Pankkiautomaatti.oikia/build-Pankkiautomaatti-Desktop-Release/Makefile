@@ -323,14 +323,16 @@ compiler_moc_header_make_all: moc_mainwindow.cpp moc_pin.cpp moc_paasivu.cpp moc
 compiler_moc_header_clean:
 	-$(DEL_FILE) moc_mainwindow.cpp moc_pin.cpp moc_paasivu.cpp moc_nosto.cpp
 moc_mainwindow.cpp: ../Pankkiautomaatti/pin.h \
+		../Pankkiautomaatti/mainwindow.h \
+		../Pankkiautomaatti/yhteys.h \
 		../Pankkiautomaatti/paasivu.h \
 		../Pankkiautomaatti/nosto.h \
-		../Pankkiautomaatti/yhteys.h \
-		../Pankkiautomaatti/kortti.h \
 		../Pankkiautomaatti/mainwindow.h
 	/usr/lib/arm-linux-gnueabihf/qt5/bin/moc $(DEFINES) -I/usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-g++ -I/home/pi/Desktop/Pankkiautomaatti.oikia/Pankkiautomaatti -I/usr/include/arm-linux-gnueabihf/qt5 -I/usr/include/arm-linux-gnueabihf/qt5/QtWidgets -I/usr/include/arm-linux-gnueabihf/qt5/QtSql -I/usr/include/arm-linux-gnueabihf/qt5/QtSerialPort -I/usr/include/arm-linux-gnueabihf/qt5/QtGui -I/usr/include/arm-linux-gnueabihf/qt5/QtCore -I. -I/usr/include/c++/4.9 -I/usr/include/arm-linux-gnueabihf/c++/4.9 -I/usr/include/c++/4.9/backward -I/usr/lib/gcc/arm-linux-gnueabihf/4.9/include -I/usr/local/include -I/usr/lib/gcc/arm-linux-gnueabihf/4.9/include-fixed -I/usr/include/arm-linux-gnueabihf -I/usr/include ../Pankkiautomaatti/mainwindow.h -o moc_mainwindow.cpp
 
-moc_pin.cpp: ../Pankkiautomaatti/paasivu.h \
+moc_pin.cpp: ../Pankkiautomaatti/mainwindow.h \
+		../Pankkiautomaatti/pin.h \
+		../Pankkiautomaatti/paasivu.h \
 		../Pankkiautomaatti/nosto.h \
 		../Pankkiautomaatti/yhteys.h \
 		../Pankkiautomaatti/pin.h
@@ -376,8 +378,7 @@ main.o: ../Pankkiautomaatti/main.cpp ../Pankkiautomaatti/mainwindow.h \
 		../Pankkiautomaatti/pin.h \
 		../Pankkiautomaatti/paasivu.h \
 		../Pankkiautomaatti/nosto.h \
-		../Pankkiautomaatti/yhteys.h \
-		../Pankkiautomaatti/kortti.h
+		../Pankkiautomaatti/yhteys.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Pankkiautomaatti/main.cpp
 
 mainwindow.o: ../Pankkiautomaatti/mainwindow.cpp ../Pankkiautomaatti/mainwindow.h \
@@ -385,14 +386,14 @@ mainwindow.o: ../Pankkiautomaatti/mainwindow.cpp ../Pankkiautomaatti/mainwindow.
 		../Pankkiautomaatti/paasivu.h \
 		../Pankkiautomaatti/nosto.h \
 		../Pankkiautomaatti/yhteys.h \
-		../Pankkiautomaatti/kortti.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Pankkiautomaatti/mainwindow.cpp
 
 pin.o: ../Pankkiautomaatti/pin.cpp ../Pankkiautomaatti/pin.h \
+		../Pankkiautomaatti/mainwindow.h \
+		../Pankkiautomaatti/yhteys.h \
 		../Pankkiautomaatti/paasivu.h \
 		../Pankkiautomaatti/nosto.h \
-		../Pankkiautomaatti/yhteys.h \
 		ui_pin.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pin.o ../Pankkiautomaatti/pin.cpp
 

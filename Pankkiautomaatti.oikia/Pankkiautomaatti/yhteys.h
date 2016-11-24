@@ -15,6 +15,7 @@ public:
     void Connect();
     void Tarkistus();
 
+
 private slots:
 private:
     QSqlDatabase db;

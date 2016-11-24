@@ -18,7 +18,6 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableView>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
@@ -32,7 +31,6 @@ public:
     QTextEdit *textEdit;
     QPushButton *pushButtonCancel;
     QPushButton *pushButtonConnect;
-    QTableView *tableView;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -42,25 +40,22 @@ public:
     {
         if (Mainwindow->objectName().isEmpty())
             Mainwindow->setObjectName(QStringLiteral("Mainwindow"));
-        Mainwindow->resize(907, 660);
+        Mainwindow->resize(415, 357);
         centralWidget = new QWidget(Mainwindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         textEdit = new QTextEdit(centralWidget);
         textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(50, 0, 301, 161));
+        textEdit->setGeometry(QRect(50, 10, 301, 161));
         pushButtonCancel = new QPushButton(centralWidget);
         pushButtonCancel->setObjectName(QStringLiteral("pushButtonCancel"));
         pushButtonCancel->setGeometry(QRect(250, 190, 101, 31));
         pushButtonConnect = new QPushButton(centralWidget);
         pushButtonConnect->setObjectName(QStringLiteral("pushButtonConnect"));
         pushButtonConnect->setGeometry(QRect(50, 190, 101, 31));
-        tableView = new QTableView(centralWidget);
-        tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(130, 300, 691, 231));
         Mainwindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Mainwindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 907, 27));
+        menuBar->setGeometry(QRect(0, 0, 415, 27));
         Mainwindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Mainwindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));

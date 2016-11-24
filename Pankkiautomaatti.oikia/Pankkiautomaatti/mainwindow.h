@@ -22,12 +22,14 @@ public:
     explicit Mainwindow(QWidget *parent = 0);
     ~Mainwindow();
 
+public slots:
+    void readData();
 
 private slots:
 
     void on_pushButtonCancel_clicked();
 
-    void readData();
+
 
     void on_pushButtonConnect_clicked();
 
@@ -36,9 +38,6 @@ private:
     Ui::Mainwindow *ui;
     Pin *uusiPin;
     QSerialPort *serial;
-    QSqlTableModel *model;
-    //Yhteys *uusiYhteys;
-    QSqlDatabase db;
 
 };
 

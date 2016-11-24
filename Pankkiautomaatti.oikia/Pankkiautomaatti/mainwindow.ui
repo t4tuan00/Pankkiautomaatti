@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>907</width>
-    <height>660</height>
+    <width>415</width>
+    <height>357</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>0</y>
+      <y>10</y>
       <width>301</width>
       <height>161</height>
      </rect>
@@ -58,23 +58,13 @@ p, li { white-space: pre-wrap; }
      <string>Connect</string>
     </property>
    </widget>
-   <widget class="QTableView" name="tableView">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>300</y>
-      <width>691</width>
-      <height>231</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>907</width>
+     <width>415</width>
      <height>27</height>
     </rect>
    </property>

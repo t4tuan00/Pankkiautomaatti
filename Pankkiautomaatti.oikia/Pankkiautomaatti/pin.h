@@ -10,6 +10,7 @@
 
 namespace Ui {
 class Pin;
+
 }
 
 class Pin : public QDialog
@@ -55,10 +56,11 @@ private:
     Ui::Pin *ui;
     Paasivu *uusiPaasivu;
     QString painettu;
-    QTextEdit *txt;
     QString tulostus;
     Yhteys *uusiYhteys;
     Yhteys *uusiTarkistus;
+   // Mainwindow *uusikortti;
+
 
 
 

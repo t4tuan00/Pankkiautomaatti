@@ -16,6 +16,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -24,44 +25,48 @@ QT_BEGIN_NAMESPACE
 class Ui_Paasivu
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButtonSaldo;
     QPushButton *pushButtonNosto;
     QPushButton *pushButtonTilitapahtumat;
     QPushButton *pushButtonCancel;
+    QTableView *tableView;
 
     void setupUi(QDialog *Paasivu)
     {
         if (Paasivu->objectName().isEmpty())
             Paasivu->setObjectName(QStringLiteral("Paasivu"));
-        Paasivu->resize(400, 300);
-        widget = new QWidget(Paasivu);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(260, 20, 125, 261));
-        verticalLayout = new QVBoxLayout(widget);
+        Paasivu->resize(1227, 621);
+        layoutWidget = new QWidget(Paasivu);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(1080, 160, 125, 261));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButtonSaldo = new QPushButton(widget);
+        pushButtonSaldo = new QPushButton(layoutWidget);
         pushButtonSaldo->setObjectName(QStringLiteral("pushButtonSaldo"));
 
         verticalLayout->addWidget(pushButtonSaldo);
 
-        pushButtonNosto = new QPushButton(widget);
+        pushButtonNosto = new QPushButton(layoutWidget);
         pushButtonNosto->setObjectName(QStringLiteral("pushButtonNosto"));
 
         verticalLayout->addWidget(pushButtonNosto);
 
-        pushButtonTilitapahtumat = new QPushButton(widget);
+        pushButtonTilitapahtumat = new QPushButton(layoutWidget);
         pushButtonTilitapahtumat->setObjectName(QStringLiteral("pushButtonTilitapahtumat"));
 
         verticalLayout->addWidget(pushButtonTilitapahtumat);
 
-        pushButtonCancel = new QPushButton(widget);
+        pushButtonCancel = new QPushButton(layoutWidget);
         pushButtonCancel->setObjectName(QStringLiteral("pushButtonCancel"));
 
         verticalLayout->addWidget(pushButtonCancel);
 
+        tableView = new QTableView(Paasivu);
+        tableView->setObjectName(QStringLiteral("tableView"));
+        tableView->setGeometry(QRect(0, 40, 1031, 571));
 
         retranslateUi(Paasivu);
 

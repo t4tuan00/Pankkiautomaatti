@@ -9,6 +9,9 @@ Pin::Pin(QWidget *parent) :
     uusiPaasivu = new Paasivu;
     uusiYhteys = new Yhteys;
     uusiTarkistus = new Yhteys;
+    connect(this, ?(?()),this,SLOT(readData??()));
+    //uusikortti = new Mainwindow;
+
 
 
 
@@ -20,6 +23,8 @@ Pin::~Pin()
     delete ui;
     delete uusiYhteys;
     delete uusiTarkistus;
+    //delete uusikortti;
+
 }
 
 void Pin::on_pushButtonCancel_clicked()
@@ -34,25 +39,27 @@ void Pin::on_pushButtonCorrect_clicked()
 
 }
 
-void Pin::on_pushButtonOk_clicked() //kun painetaan nappia tarkistetaan pin-koodi ja kortin täsmäävyys.
+void Pin::on_pushButtonOk_clicked() //kun painetaan nappia tarkistetaan pin-koodi ja kortin täsmäävyys. kortti sisältää kortinnumeron. painettu sisältää syötetyn pinin.
 {
-    uusiYhteys->Connect();
+   /*uusiYhteys->Connect();
     uusiTarkistus->Tarkistus();
-
-    uusiPaasivu->show();
-    uusiPaasivu->exec();
-
-    /*if()
-    {
-       //Tarkistus sisältää kortin numerot ja pin koodit(kortti_nro,pin). kortti sisältää kortin numeron. label tai painettu sisältää pin koodin.
-
-
-    }
-    else()
+    uusikortti->readData();
+   if(kortti == kortti_nro)
     {
 
+    if (painettu==pin)
+        {
+        uusiPaasivu->show();
+        uusiPaasivu->exec();
+        }
+
     }
-    */
+    else
+    {
+        qDebug()<< "Pin väärin!!!!!HOMO YRITÄ UUDELLEEN";
+    }
+*/
+
 }
 
 void Pin::on_pushButton_1_clicked()

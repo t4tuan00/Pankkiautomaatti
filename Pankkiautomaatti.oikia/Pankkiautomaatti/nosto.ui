@@ -6,22 +6,116 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1297</width>
-    <height>600</height>
+    <width>667</width>
+    <height>447</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
+   <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>0</y>
-      <width>1251</width>
-      <height>521</height>
+      <x>1</x>
+      <y>228</y>
+      <width>91</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="text">
+     <string>60</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_nosta40">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>140</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>40</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_nosta20">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>52</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>20</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_Cancel">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>316</y>
+      <width>91</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Peruuta</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_nostasumma">
+    <property name="geometry">
+     <rect>
+      <x>363</x>
+      <y>319</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Syötä summa</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_nosta140">
+    <property name="geometry">
+     <rect>
+      <x>363</x>
+      <y>143</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>140</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_nosta240">
+    <property name="geometry">
+     <rect>
+      <x>363</x>
+      <y>231</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>240</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_nosta90">
+    <property name="geometry">
+     <rect>
+      <x>363</x>
+      <y>55</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>90</string>
     </property>
    </widget>
   </widget>
@@ -30,7 +124,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1297</width>
+     <width>667</width>
      <height>27</height>
     </rect>
    </property>
